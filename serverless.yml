@@ -8,7 +8,7 @@ provider:
 
 functions:
   basic:
-    handler: handler.hello
+    handler: src/main.hello
     name: basic-api
     memorySize: 128 # mb
     timeout: 5 # seconds
