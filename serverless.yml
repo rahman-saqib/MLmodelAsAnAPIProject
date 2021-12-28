@@ -1,0 +1,17 @@
+service: ml-model-as-an-api
+
+provider:
+  name: aws
+  runtime: python3.9
+  lambdaHashingVersion: '20201221'
+
+functions:
+  basic:
+    handler: handler.hello
+    name: basic-api
+    memorySize: 128 # mb
+    timeout: 5 # seconds
+    events:
+      - http:
+          path: /
+          method: get
